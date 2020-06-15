@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- header 模块开始 -->
+    <header>
+        <h1 class="logo"></h1>
+        <input type="text" class="search" placeholder="搜索音乐">
+        <div class="login">
+            <span class="userId"></span>
+            <a href="#">登录</a>
+            <a href="#">皮肤</a>
+            <input type="color">
+        </div>
+    </header>
+    <!-- header 模块结束 -->
+    <!-- 用户登录部分 -->
+    <div class="user-login">
+        <h5>用户登录</h5>
+        <div class="input">
+            <li>
+                <input placeholder="用户名" type="text">
+            </li>
+            <li>
+                <input placeholder="密码" type="password">
+            </li>
+            <li>
+                <input type="checkbox">记住密码
+            </li>
+        </div>
+        <a class="logon" href="#">登录</a>
+        <a href="#" class="clo">X</a>
+    </div>
+    <!-- 登录窗口部分结束 -->
+    <div class="main">
+        <div class="main-left">
+            <img class="disc" src="" alt="">
+            <div class="items">
+                <a href="#">喜欢</a>
+                <a href="#">收藏</a>
+                <a href="#">下载</a>
+                <a href="#">分享</a>
+            </div>
+        </div>
+        <div class="main-right">
+            <h5 class="song-name"></h5>
+            <div class="des">
+                专辑：
+                <span class="album"></span>
+                歌手：
+                <span class="singer"></span>
+                专辑：
+                <span class="album">搜索页</span>
+            </div>
+            <ul class="lyrics">
+
+            </ul>
+        </div>
+    </div>
+    <!-- 播放列表 开始 -->
+    <div class="song-con">
+        <div class="song-con-hd">
+            <span>播放列表</span>
+        </div>
+        <div class="song-con-bd">
+            总共
+            <span class="num">1</span>首
+            <a href="#">清空</a>
+            <ul class="wrap">
+
+            </ul>
+        </div>
+    </div>
+    <!-- 播放列表 -->
+    <!-- 音频文件 -->
+    <audio src=""></audio>
+    <!-- 音频文件 -->
+    <!-- 桌面歌词部分 -->
+    <div class="desk_lyric_part">
+
+    </div>
+    <!-- 桌面歌词 -->
+    <!-- playbar 模块开始 -->
+    <div class="playbar">
+        <div class="controls">
+            <a class="prev" href="javascript:;"></a>
+            <a class="" href="javascript:;"></a>
+            <a class="next" href="javascript:;"></a>
+        </div>
+        <div class="time">
+            <div class="start">
+                <span class="start-m">00</span>:
+                <span class="start-s">00</span>
+            </div>
+            <input type="range" max="" min="" step="1">
+            <div class="end">
+                <span class="end-m">00</span>:
+                <span class="end-s">00</span>
+            </div>
+        </div>
+        <div class="volume">
+            <i class="bell" index="1"></i>
+            <input type="range" min="0" max="1" step="0.01">
+        </div>
+        <div class="function">
+            <i class="mode"></i>
+            <i class="desk-lyric" title="桌面歌词"></i>
+            <i class="song-lists" title="播放列表"></i>
+        </div>
+    </div>
+    <!-- playbar 模块结束 -->
+    <!-- 评论模块开始 -->
+    <div class="comments">
+        <div class="comments-input">
+            <h5>听友评论
+                <span class="comment-num">（已有2条评论) </span>
+            </h5>
+            <textarea name="" id="" cols="100" rows="5">按下回车键发表评论</textarea>
+        </div>
+        <div class="brilliant-comments">
+            <h5>精彩评论</h5>
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

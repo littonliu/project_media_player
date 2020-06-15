@@ -1,0 +1,516 @@
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input {
+    outline: none;
+}
+
+
+/* 判断页面宽度，设备适配 */
+@media screen and (max-width:750px) {
+    html {
+        font-size: 66.15px;
+    }
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size: 72px;
+    }
+}
+@media screen and (min-width:1000px) {
+    html {
+        font-size: 86px;
+    }
+}
+@media screen and (min-width:1200px) {
+    html {
+        font-size: 100px;
+    }
+}
+body {
+    max-width: 10rem;
+    margin: 0 auto;
+}
+/* header 部分开始 */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .5rem;
+    background: url(../img/playbar.png) repeat-x 0 -7px;;
+}
+header .logo {
+    float: left;
+    height: .34rem;
+    width: 1.57rem;
+    margin-top: .08rem;
+    margin-left: .09rem;
+    background: url(../img/topbar.png) no-repeat 0px -0.19rem;
+    background-size: 2.4rem 2.15rem;
+}
+header .search {
+    float: left;
+    width: 1.5rem;
+    height: .22rem;
+    margin-top: .11rem;
+    margin-left: 1.03rem;
+    border-radius: .07rem;
+}
+header .login {
+    position: relative;
+    display: flex;
+    float: right;
+    width: 1.8rem;
+    margin-right: 1.36rem;
+    margin-top: .12rem;
+    font-size: .16rem;
+}
+header .login span {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    color: #fff;
+}
+header .login a,
+header .login input {
+    flex: 1;
+    color: #fff;
+}
+header .login input {
+    height: .25rem;
+    margin-left: -0.2rem;
+}
+/* playbar 部分开始 */
+.playbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+    height: .5rem;
+    background: url(../img/playbar.png) repeat-x 0 -7px;
+}
+.controls {
+    display: flex;
+    justify-content: space-around;
+    flex: 4;
+}
+.controls a {
+    float: left;
+    width: .24rem;
+    height: .25rem;
+    background: url(../img/playbar.png) no-repeat -0.02rem -1.31rem;
+    background-size: 1.52rem 6.16rem;
+}
+.controls a:nth-child(2) {
+    width: .32rem;
+    height: .32rem;
+    margin-top: 0.07rem;
+    background-position: -0.02rem -2.06rem;
+}
+.controls a.play {
+    background-position: -0.02rem -1.67rem; 
+}
+.controls a:nth-child(3) {
+    margin-top: .1rem;
+    background-position: -0.82rem -1.31rem;
+}
+.controls a:nth-child(1) {
+    margin-top: .1rem;
+}
+.controls a:nth-child(1):hover {
+    background-position: -0.32rem -1.31rem;
+}
+.controls a:nth-child(3):hover {
+    background-position: -1.12rem -1.31rem;
+}
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 12;
+    font-size: .16rem;
+    color: #fff;
+}
+.time .start,
+.time .end {
+    width: 15%;
+    text-align: center;
+}
+.time .start-s,
+.time .end-s {
+    margin-left: -.05rem;
+}
+.time input[type="range"] {
+    flex: 1;
+    border-radius: .03rem;
+    -webkit-appearance: none;
+}
+.time input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: .12rem;
+    height: .12rem;
+    margin-top: -0.02rem;
+    background-color: pink;
+    border-radius: 50%;
+}
+.time input[type="range"]::-webkit-slider-runnable-track {
+    height: .08rem;
+    background-color: #fff;
+}
+.volume {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 3;
+}
+.volume .bell {
+    width: .1rem;
+    height: .15rem;
+    margin-right: .2rem;
+    background: url(../img/playbar.png) no-repeat -1.33rem -0.74rem;
+    background-size: 1.52rem 6.16rem;
+}
+.volume input[type="range"] {
+    flex: 1;
+    height: .08rem;
+    border-radius: .03rem;
+    -webkit-appearance: none;
+}
+.volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: .12rem;
+    height: .12rem;
+    margin-top: -0.02rem;
+    background-color: white;
+    border-radius: 50%;
+}
+.volume input[type="range"]::-webkit-slider-runnable-track {
+    height: .08rem;
+    background-color: #fff;
+    border-radius: .2rem;
+}
+.function {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.function i {
+    cursor: pointer;
+}
+.function .mode {
+    width: .2rem;
+    height: .18rem;
+    background: url(../img/playbar.png) no-repeat -0.06rem -3.46rem;
+    background-size: 1.52rem 6.16rem;
+}
+.function .desk-lyric {
+    width: .2rem;
+    height: .15rem;
+    background: url(../img/playbar.png) no-repeat 0 -0.57rem;
+    background-size: 1.52rem 6.16rem;
+}
+.function .song-lists {
+    width: .22rem;
+    height: .22rem;
+    background: url(../img/playbar.png) no-repeat -0.45rem -1rem;
+    background-size: 1.52rem 6.16rem;
+}
+/* main 部分开始 */
+.main {
+    display: flex;
+    height: 5rem;
+    margin-top: .5rem;
+    /* background: linear-gradient(45deg,#d3959b 20%,#bfe6ba); */
+    background: linear-gradient(45deg,black,white, grey);
+}
+.main-left {
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    padding: .5rem 0 0 1.2rem;
+    width: 4.9rem;
+    height: 5rem;
+}
+.main-left .disc {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: .5rem solid #000;
+    border-radius: 50%;
+}
+.main-left .items {
+    margin-top: -0.7rem;
+}
+.main-left .items a {
+    font-size: .16rem;
+    margin-right: .12rem;
+}
+.main-right {
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    padding: .2rem 0 0 .2rem;
+    height: 5rem;
+    width: 5.1rem;
+}
+.main-right .song-name {
+    font-size: .3rem;
+}
+.main-right .des {
+    margin: .15rem 0 .15rem;
+    font-size: .2rem;
+}
+.main-right .des .album,
+.main-right .des .singer {
+    color: blue;
+}
+.main-right .lyrics {
+    overflow: auto;
+    width: 4.9rem;
+    height: 3.5rem;
+    font-size: .2rem;
+}
+.main-right .lyrics li {
+    height: .3rem;
+    transition: all 2s;
+}
+/* 定义动画 */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.playing {
+    animation: rotate 6s linear infinite forwards;
+}
+.playing-pause {
+    animation-play-state: paused;
+}
+/* 播放列表部分 */
+.song-con {
+    position: fixed;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    top: 3.6rem;
+    right: 1.8rem;
+    width: 5rem;
+    height: 3.8rem;
+}
+.song-con-hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: .18rem;
+    background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+}
+.song-con-hd span {
+    padding: 0 .1rem 0;
+    border-radius: .15rem;
+    background-image: linear-gradient( 135deg, #FAD7A1 10%, #E96D71 100%);
+    
+}
+.song-con-bd {
+    flex: 7;
+    padding-top: .1rem;
+    font-size: .16rem;
+    /* text-align: center; */
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}
+.song-con-bd li {
+    margin: .1rem 0 .1rem;
+    font-size: .18rem;
+    cursor: pointer;
+}
+/* 桌面歌词部分 */
+.desk_lyric_part {
+    display: none;
+    position: fixed;
+    top: 4.3rem;
+    left: 2.2rem;
+    width: 5rem;
+    height: 1rem;
+    line-height: 1rem;
+    border-radius: 0.5rem;
+    font-size: .3rem;
+    text-align: center;
+    transition: all 1s;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    animation: move 3s infinite;
+    z-index: 1;
+}
+.desk_lyric_part::before {
+    content: "";
+    position: absolute;
+    left: -0.05rem;
+    right: -0.05rem;
+    top: -0.05rem;
+    bottom: -0.05rem;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    filter: blur(.2rem);
+
+}
+.desk_lyric_part.changed::before{
+    animation: move 6s infinite;
+}
+@keyframes move {
+    100%{
+        background-position: -400% 0;
+    }
+}
+/* 用户登录部分   */
+.user-login {
+    position: fixed;
+    top: 1.28rem;
+    left: 5rem;
+    display: none;
+    box-sizing: border-box;
+    padding: .2rem 0 0 .18rem;
+    width: 4rem;
+    height: 2.72rem;
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+    text-align: center;
+}
+.user-login .clo {
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    font-size: .1rem;
+    color: red;
+}
+.user-login h5 {
+    margin-bottom: .3rem;
+    font-size: .18rem;
+}
+.user-login li:nth-child(-n+2) {
+    margin-bottom: .2rem;
+    font-size: .16rem;
+}
+.user-login li:nth-child(-n+2) input {
+    width: 2.5rem;
+    height: .3rem;
+}
+.user-login li:nth-child(3) {
+    font-size: .16rem;
+}
+.logon {
+    display: block;
+    margin: .3rem auto;
+    width: 2.54rem;
+    height: .35rem;
+    line-height: .35rem;;
+    font-size: .16rem;
+    background-image: linear-gradient( 135deg, #FF7AF5 10%, #513162 100%);
+    color: #fff;
+}
+/* 评论部分 */
+.comments {
+    height: 7rem;
+    margin-top: .59rem;
+    background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+    font-size: .2rem;
+}
+.comments .comments-input {
+    padding-top: .2rem;
+}
+.comments .comments-input h5 {
+    font-size: .22rem;
+    font-weight: 400;
+}
+.comments .comments-input h5 span {
+    font-size: .16rem;
+}
+.comments-input textarea {
+    box-sizing: border-box;
+    padding: .09rem 0 0 .12rem;
+    margin: .2rem 0 .2rem .2rem;
+    width: 9.6rem;
+    height: .35rem;
+}
+.brilliant-comments {
+    font-size: .16rem;
+}
+.brilliant-comments li {
+    overflow: hidden;
+    width: 1000px;
+    margin: .2rem 0 .2rem .2rem;
+}
+.brilliant-comments img {
+    width: 100%;
+    border-radius: 50%;
+}
+.brilliant-comments li .pic {
+    width: .6rem;
+}
+.brilliant-comments .pic,
+.comments-part {
+    float: left;
+}
+.comments-part {
+    width: 8.7rem;
+    margin-left: .3rem;
+}
+.comments-part p {
+    line-height: 1.7;
+}
+.brilliant-comments h5 {
+    width: 9.6rem;
+    margin: .2rem 0 .2rem .2rem;
+    border-bottom: 1px dashed #000;
+    font-size: .18rem;
+}
+.username {
+    color: blue;
+}
+.reply-con {
+    color: pink;
+}
+.reply-con span{
+    color: blue;
+    font-style: italic;
+}
+
+.others {
+    overflow: hidden;
+    margin-top: .1rem;
+}
+
+.others .date {
+    color: #94D6EA;
+}
+.others .date {
+    float: left;
+}
+.others .function {
+    float: right;
+}
+.others a {
+    color: green;
+}
+.likes-num {
+    color: pink;
+}
+
+
+
+
+
+
